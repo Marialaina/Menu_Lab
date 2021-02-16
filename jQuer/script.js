@@ -17,5 +17,12 @@ let menuLinks = [
 ];
 
 menuLinks.forEach(link => {
-    link.innerHTML = `<a href = ${menuLinks.href}> </a>`
+    const aTags = document.createElement("a");
+    aTags.href = link.href;
+    const text = document.createTextNode(link.text);
+    aTags.append(text);
+    console.log(aTags)
+    topMenuEl.append(aTags)
+    
+  
 })
